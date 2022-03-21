@@ -1,0 +1,174 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.main{
+	width: 100%;
+	height: 100vh;
+	transition: 1s;
+	transform-style: preserve-3d;
+}
+.page {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.content {
+	height: 55%;
+	display: flex;
+	padding: 0 20%;
+}
+.content img {
+		max-width: 40%;
+		height: auto;
+	}
+.info {
+	width: 60%;
+	display: flex;
+	align-items: flex-end;
+	padding: 0 5%;
+}
+.wrap_info h2 {
+	color:  white;
+	padding: 5px 0;
+}
+.wrap_info p {
+	padding: 2px 0;
+	color: gold;
+}
+.wrap_info p a {
+	color: gold;
+	text-decoration: none;
+}
+.control {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+ul {
+	display: flex;
+	justify-content: center;
+}
+li {
+	margin: 0 50px;
+	position: relative;
+	list-style-type: none;
+	color: yellow;
+}
+li span {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,20px);
+	padding: 10px;
+	background: green;
+	border-radius: 100%;
+}
+li:hover span {
+	background: blue;
+}
+li:hover {
+	cursor: pointer;
+}
+.active {
+	background: blue;
+}
+button {
+	padding: 5px 15px;
+	font-size: 20px;
+	border: none;
+	background: none;
+	color: blue;
+}
+button:hover {
+	color:  green;
+	cursor:  pointer;
+}
+.page_1 {
+	background-image: url("image/info.jpg");
+}
+.page_2 {
+	background-image: url("image/education.jpg");
+}
+.page_3 {
+	background-image: url("image/skills.jpg");
+}
+.page_4 {
+	background-image: url("image/project.jpg");
+}
+.page_content {
+	padding: 0 3%;
+}
+.page_info {
+	width: 100%;
+}
+.page_3 .wrap_info h2 {
+	color:  gold;
+}
+.page_3 .wrap_info p {
+	color: white;
+}
+.page_3 .wrap_info p a {
+	color: white;
+}
+.page_3 .wrap_info p b {
+	color: silver;
+}
+.page_4 .wrap_info p {
+	color: silver;
+}
+.page_4 .wrap_info p b {
+	color: green;
+}
+
+
+@media screen and (max-width: 1200px) {
+	.content {
+		padding: 0 5%;
+	}
+	
+}
+@media screen and (max-width: 992px) {
+	.content {
+		padding: 0 3%;
+	}
+	.page_1 .info {
+		width: 40%;
+		padding: 0 3%;
+	}
+	.content img {
+		max-width: 60%;	
+	}
+}
+@media screen and (max-width: 768px) {
+	.page_1 .content {
+		flex-direction: column;
+		height:  100%;
+		padding: 5% 5%;
+	}
+	.content img {
+		max-width: 35%;	
+	}
+	.page_1 .info {
+		width: 100%;
+		padding: 5% 0;
+	}
+	li {
+		margin: 0 20px;
+	}
+}
+@media screen and (max-width: 360px) {
+	li {
+		margin: 0 10px;
+	}
+}
